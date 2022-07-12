@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Edit.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>QX Attendance System </title>
+
+</head>
+<body>
+
+    <nav class="sidebar close">
+        
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="QX.png">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="text title-text">Attendance System</span>
+                </div>
+            </div>
+
+            <i class='bx bx-menu toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="dashboard.html" class="menu-item ">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="Report.html" class="menu-item">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Report</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="Profile.html" class="menu-item is-active">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+    	<div class = "bar">
+    	<i class='bx bx-user-circle'></i>
+        <p class="user">John Doe</p>
+    	</div>
+    </section>
+    
+<div class="transdiv">
+
+    <h2 class="titleprof"> PROFILE </h2>
+    <img src="mainprof.png" class="mainprof">
+    
+    <ul>
+        <li>
+            <a href="#"><button class="button"> Change Photo </button></a>
+        </li>
+        <li>
+            <a href="#"><button class="button1"> Delete</button></a>
+        </li>
+    </ul>
+      
+
+
+</div> 
+    <div class="profile-content">
+        <b><table class="profile-form">
+            <form action="#">
+                <tr>
+                    <td>
+                    <label class="label-left-part" for="fname">First name:</label>
+                    <br>
+                    <input class="left-part" type="text" id="fname" name="fname">
+                    </td>
+                    <td>
+                    <label class="label-right-part" for="lname">Last name:</label>
+                    <br>
+                    <input class="right-part" type="text" id="lname" name="lname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <br>
+                    <label class="label-left-part" for="email">Email Address</label>
+                    <br>
+                    <input class="left-part" type="email" id="email" name="email">
+                    </td>
+                    <td>
+                    <label class="label-right-part" for="ContactNumber">Contact Number</label>
+                    <br>
+                    <input class="right-part" type="text" id="ContactNumber" name="ContactNumber">
+                    </td>
+                </tr>   
+            </tr>
+            <tr>
+                <td>
+                <br>
+                <label class="label-left-part" for="depart">Department</label>
+                <br>
+                <input class="left-part" type="text" id="depart" name="depart">
+                </td>
+                <td>
+                <label class="label-right-part" for="jobtitle">Job Title</label>
+                <br>
+                <input class="right-part" type="text" id="jobtitle" name="jobtitle">
+                </td>
+            </tr> 
+            <tr>
+                <td>
+                <br>
+                <label class="label-left-part" for="newpass">New Password</label>
+                <br>
+                <input class="left-part" type="text" id="newpass" name="newpass">
+                </td>
+                <td>
+                <label class="label-right-part" for="c-password">Confirm New Password</label>
+                <br>
+                <input class="right-part" type="text" id="c-password" name="c-password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <br>
+                <label class="label-left-part" for="cu-pass">Current Password</label>
+                <br>
+                <input class="left-part" type="text" id="cu-pass" name="cu-pass">
+                </td>
+                <td>
+
+                </td>
+            </tr> 
+            <tr>                                           
+                <th></th>
+                <th> <button class="cancel"><a href="Profile.html">Cancel</a></button> <button class="save-changes">Save Changes</button></th>
+            </tr> 
+            </form>
+        </table></b>
+  
+    
+    </div>
+        
+        
+   
+
+    <script>
+      const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector('.toggle');
+
+        toggle.addEventListener("click" , () =>{
+            sidebar.classList.toggle("close");
+        })
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>QX Attendance System </title>
+
+</head>
+<body>
+
+    <nav class="sidebar close">
+        
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="QX.png">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="text title-text">Attendance System</span>
+                </div>
+            </div>
+
+            <i class='bx bx-menu toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="dashboard.html" class="menu-item is-active">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="Report.html" class="menu-item">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Report</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="Profile.html" class="menu-item">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="Login_AS.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+        
+    </nav>
+
+    
+
+    <section class="home">
+    	<div class = "bar">
+    	<i class='bx bx-user-circle'></i>
+        <p class="user">John Doe</p>
+    	</div>
+    </section>
+        
+<div class="transdiv">
+    <img src="mainprof.png" class="time-user">
+    <table class="table-timeset">
+        <tr>
+            <th>
+               John Doe
+            </th>
+        </tr>
+        <tr>
+            <td>
+                IT Department
+            </td>
+        </tr>
+    </table>
+
+    <b><p class="time" id="demo"></p></b>
+
+    <script>
+        
+        var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+                var x = setInterval(function() {
+          var now = new Date().getTime();
+          var distance = countDownDate - now;
+
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("demo").innerHTML = hours + ": "
+          + minutes + ": " + seconds + " ";
+  
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+        
+    
+<button class="timeset-button"> Start </button>
+
+<img src="pause.png" class="pause-button">
+
+<h3 class="attendancelog-title">Attendance Log</h3>
+
+<form class="filter-week">
+    <label for="filter"></label>
+    <select id="filter" name="filter">
+      <option value="week">This week</option>
+      <option value="year">This year</option>
+      <option value="month">This month</option>
+      <option value="days">This day</option>
+    </select>
+  </form>
+<h3 class="leavereport-title">Leave Report</h3>
+<h3 class="leavebalance-title">Leave Balance</h3>
+</div> 
+
+<div class="attendancelog">
+    <table class="attendance-table">
+        <tr>
+            <th>Date</th>
+            <th>Time In</th>
+            <th>Time Out</th>
+            <th>Hours Worked</th>
+            <th>Under Time</th>
+            <th>Action</th>   
+        </tr>
+        <tr>
+            <td>07/04/2022</td>
+            <td>8:00:00</td>
+            <td>17:00:00</td>
+            <td>8:00:00</td>
+            <td>0 Hr 0 Min</td>
+            <td><img src="delete.png" class="delete-action"></td>
+        </tr>
+        <tr>
+            <td>07/05/2022</td>
+            <td>8:00:00</td>
+            <td>17:00:00</td>
+            <td>8:00:00</td>
+            <td>0 Hr 0 Min</td>
+            <td><img src="delete.png" class="delete-action"></td>
+        </tr>
+        <tr>
+            <td>07/06/2022</td>
+            <td>8:00:00</td>
+            <td>17:00:00</td>
+            <td>8:00:00</td>
+            <td>0 Hr 0 Min</td>
+            <td><img src="delete.png" class="delete-action"></td>
+        </tr>
+    </table>
+    </div>
+    
+    
+    <div class="leave-report">
+         <table class="leave-report-table">
+        <tr>
+            <th>Type</th>
+            <th>Date Filed</th>
+            <th>Leave Date</th>
+            <th>Reason</th>
+            <th>Status </th>
+            <th>Approver</th>   
+        </tr>
+        <tr>
+            <td>Vacation Leave</td>
+            <td>June 1, 2022</td>
+            <td>June 7, 2022</td>
+            <td>Personal Errands</td>
+            <td>Approved</td>
+            <td>Jane Doe</td>
+        </tr>
+        <tr>
+            <td>Vacation Leave</td>
+            <td>July 25, 2022</td>
+            <td>July 28, 2022</td>
+            <td>Personal Errands</td>
+            <td>Pending</td>
+            <td></td>
+        </tr>
+    </table>   
+    </div>
+
+    
+    <div class="leave-balance">
+    <table class="leave-balance-general">
+        <tr>
+            <th>
+                <table class="vl-table">
+                <tr>
+                    <th>
+                        Vacation Leave
+
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        6/8 <br> Available
+                    </td>
+                </tr>
+                </table>
+            </th>
+            <th>
+                <table class="sl-table">
+                    <tr>
+                        <th>
+                            Sick Leave
+    
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            6/8 <br> Available
+                        </td>
+                    </tr>
+            
+                </table>
+            </th>
+            <th>
+                <table class="off-table">
+                    <tr>
+                        <th>
+                            Offset
+    
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            6/8 <br> Available
+                        </td>
+                    </tr>
+            
+                </table>
+            </th>
+        </tr>
+    </table>
+    <button class="leave-request-button">Leave Request</button>
+                <table class="legend">
+                <tr>
+                    <th><span class="dot1"></span>Present</th>
+                    <th><span class="dot2"></span>Absent</th>
+                    <th><span class="dot3"></span>On Leave</th>
+                </tr>
+    
+            </table>
+    </div>
+    <div class="calendar"> 
+        <img src="calendar_icon.png" class="calendar-icon">
+        <img src="a-left.png" class="a-left"> <img src="a-right.png" class="a-right">
+        <h3 class="date-timeset">July 2021</h3>
+       
+        <table class="calendar-table" style="overflow-y:auto;">
+        <tr> 
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tues</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+        <tr>
+            <td class="excluded">26</td>
+            <td class="excluded">27</td>
+            <td class="excluded">28</td>
+            <td class="excluded">29</td>
+            <td class="excluded">30</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>18</td>
+            <td>18</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td class="excluded">1</td>
+            <td class="excluded">2</td>
+            <td class="excluded">3</td>
+            <td class="excluded">4</td>
+            <td class="excluded">5</td>
+            <td class="excluded">6</td>
+        </tr>
+        </table>
+
+    </div>
+
+
+
+
+    <script>
+      const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector('.toggle');
+
+        toggle.addEventListener("click" , () =>{
+            sidebar.classList.toggle("close");
+        })
+    </script>
+
+    
+
+<!--<div id="logout-modal">
+    <div class="modal">
+        <div class="logout form">
+            <img src="QX.png" class="logout-logo"><h2>LOGOUT</h2> <br><br>
+            <h6 class="modal-content">Are you sure you want to sign out?</h6>
+            <button class="logout-cancel">Cancel</button>
+            <button class="logout">Logout</button>
+        </div>
+    </div>
+</div>
+  
+
+
+<script type="text/javacript">
+    
+    $(function(){
+        $('logout-show').click(function(){
+            $('#logout-modal').fadeIn().css("display","flex");
+        });
+        $('.logout-cancel').click(function()){
+            $('#logout-modal').fadeOut().css("display","flex");
+        });
+    });
+</script>-->
+ 
+       
+
+
+</body>
+</html>

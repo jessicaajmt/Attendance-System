@@ -1,0 +1,619 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI";
+}
+
+:root{
+    /* ===== Colors ===== */
+    --body-color: #e5e4e2;
+    --sidebar-color: #f8f8ff;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #555555;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+/* ===== Sidebar ===== */
+ .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 249px;
+    padding: 10px 0px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;  
+}
+
+.sidebar.close{
+    width: 88px;
+}
+
+.sidebar li{
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.sidebar header .image{
+    margin-top: 15px;
+    min-width: 60px;
+}
+
+.sidebar .icon{
+    min-width: 90px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.sidebar .text,
+.sidebar .icon{
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+
+.sidebar .text{
+    font-size: 18px;
+    font-weight: 650;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar .title-text {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+.sidebar.close .text{
+    opacity: 0;
+}
+
+/* =========================== */
+
+.sidebar header{
+    position: relative;
+}
+
+.sidebar header .image-text{
+    display: absolute;
+    justify-items: center;
+}
+
+.sidebar header .logo-text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar header .image{
+    display: flex;
+    justify-content: center;
+}
+
+.image img{
+    width: 50px;
+
+}
+
+.sidebar header .toggle{
+    position: absolute;
+    top: 25%;
+    right: -70px;
+    transform: translateY(-50%) rotate(0deg);
+    height: 20px;
+    width: 20px;
+    margin-right: 40px;
+    margin-top: -10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+.sidebar.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar .menu{
+    margin-top: 120px;
+}
+
+.sidebar li a{
+    list-style: none;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+   text-decoration: none;
+   transition: var(--tran-03);
+}
+
+.sidebar .menu-bar{
+    height: calc(100% - 160px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+
+.menu-bar::-webkit-scrollbar{
+    display: none;
+}
+
+.home {
+    position: fixed;
+    top: 0;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 200px);
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+.home i {
+    position: fixed;
+    padding-top: 20px;
+    margin-left: -50px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.bar {
+    height: 10%;
+    color: black;
+    text-align: right;
+    padding-right: 150px;
+    background-color:#f5f5f5;
+}
+
+p {
+    font-size: 15px;
+    padding-top: 31px;
+    margin-right: -45px;
+}
+
+.sidebar.close ~ .home{
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+
+.sidebar li a:hover {
+    background-color: #f5f5f5;
+    color: black;
+    border-right: 5px solid #696969;
+}
+
+.menu-item.is-active {
+    border-right: 5px solid #d40000;
+}
+img.mainprof{
+    margin-left: 120px;
+    margin-top: 50px;
+    width: 100px;
+}
+h2.titleprof{
+margin-left: 50px;
+margin-top: 10px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-style: initial;
+}
+.button {
+  background-color: rgb(173, 21, 21);
+ border-radius: 10px;
+  width: 40%;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+margin-left: 100px;
+margin-top: 30px;
+
+
+}
+.button1 {
+  background-color: rgb(206, 201, 201);
+ border-radius: 10px;
+  width: 40%;
+  border: none;
+  color: rgb(14, 12, 12);
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+margin-left: 100px;
+margin-top: 15px;
+
+
+}
+div.attendancelog{
+width: 570px;
+height: 200px;;
+border-style: none;
+border-radius:0px;
+margin-left: 250px;
+margin-top: 240px;
+background-color: white;
+position: fixed;
+}
+.right-part{
+margin-left:50px;
+margin-top: 10px;
+
+
+
+
+}
+.left-part{
+margin-top: 10px;
+
+
+}
+label.label-right-part{
+margin-left: 60px;
+
+
+
+
+
+
+
+}
+label.label-left-part{
+margin-left: 5px;
+padding-top: 30px;
+
+
+
+}
+a.button-submit{
+float: right;
+margin-top: 30px;
+margin-right: 30px;
+text-decoration: underline;
+color: black;
+
+}
+input{
+border-style: line;
+border-radius: 7px;
+border-color: rgb(197, 193, 193);
+height: 28px;
+width: 170px;
+
+
+
+
+}
+table.profile-form{
+margin-left: 80px;
+margin-top: 59px;
+font-size: 12px;
+
+}
+a.button{
+text-decoration-color: white;
+
+}
+div.transdiv{
+width: 1000px;
+height: 125px;;
+border-style: none;
+border-radius: 0px;
+margin-left: 250px;
+margin-top: 70px;
+background-color: rgb(249, 249, 249);
+position: fixed;
+
+}
+li{
+    list-style-type: none;
+}
+.logout-logo{
+    width: 40px;
+}
+#logout-modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+    z-index: rgba(0,0,0,0,6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: center;
+}   
+.modal{
+    background: white;
+    padding: 10px 40px 40px 10px;
+    border-radius: 25px;
+    width: 400px;
+    text-align: center;
+    
+    
+}
+.logout-form{
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+button.logout{
+    background-color: red;
+    color: white;
+    border: none;
+    width: 30%;
+    border-radius: 20px;
+}
+button.logout-cancel{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    width: 30%;
+    border-radius: 20px;
+}
+h6.modal-content{
+    margin-top: -30px;
+    margin-bottom: 30px;
+    color: rgb(212, 208, 208);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+}
+.time-user{
+    width: 100px;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+.table-timeset{
+    margin-left: 180px;
+    margin-top: -90px;
+    
+    
+}
+.time {
+float: right;
+font-size: 30px;
+margin-top: -80px;
+margin-right: 210px;
+text-decoration: solid;
+
+}
+.timeset-button{
+width: 90px;
+height: 30px;
+background-color: #d40000;
+color: white;
+border: none;
+border-radius: 5px;
+float: right;
+margin-top: -40px;
+margin-right: 80px;
+}
+.pause-button{
+width: 25px;
+float: right;
+margin-top: -37px;
+margin-right: 45px;
+}
+.attendancelog-title{
+margin-top: 63px;
+}
+.filter-week{
+margin-left: 450px;
+margin-top: -25px;
+}
+.attendance-table{
+width: 100%;
+text-align: center;
+font-size: 14px;
+}
+.delete-action{
+width: 15px;
+}
+.attendance-table th{
+border-bottom: 0.2px solid;
+border-color: rgba(194, 189, 189, 0.402);
+padding-top: 3px;
+padding-bottom: 5px;
+border-collapse: collapse;
+
+}
+div.leave-report{
+width: 570px;
+height: 200px;
+border-style: none;
+border-radius:0px;
+margin-left: 250px;
+margin-top: 475px;
+background-color: white;
+position: fixed;
+
+}
+h3.leavereport-title{
+margin-top: 210px;
+
+}
+.leave-report-table{
+width: 100%;
+text-align: center;
+font-size: 14px;
+}
+.leave-report-table th{
+border-bottom: 0.2px solid;
+border-color:  rgba(194, 189, 189, 0.402);
+padding-top: 3px;
+padding-bottom: 5px;
+border-collapse: collapse;
+
+}
+div.leave-balance{
+width: 400px;
+height: 120px;
+border-style: none;
+border-radius:0px;
+margin-left: 850px;
+margin-top: 230px;
+background-color: white;
+position: fixed;
+
+}
+div.calendar{
+width: 400px;
+height: 215px;
+border-style: none;
+border-radius:0px;
+margin-left: 850px;
+margin-top: 365px;
+background-color: white;
+position: fixed;
+
+}
+h3.leavebalance-title{
+float: right;
+margin-top: -265px;
+margin-right: 280px;
+}
+table.leave-balance-general{
+    width: 100%;
+    text-align: center;
+    font-size: medium;
+    margin-top: 10px;
+    
+    
+}
+table.vl-table th{
+    background-color: rgb(245, 195, 102);
+    font-size: medium;
+    width: 33.33%;
+    
+}
+.vl-table td{
+    background-color: wheat;
+    font-size: medium;
+    
+
+}
+table.sl-table th{
+    background-color: yellow;
+    font-size: medium;
+    border-style: none;
+    width: 33.33%;
+}
+.sl-table td{
+    background-color: rgb(245, 245, 160);
+    font-size: medium;
+
+}
+.off-table tr{
+    background-color: lightblue  ;
+    font-size: medium;
+}
+table.off-table th{
+    background-color: rgb(6, 193, 255) ;
+    font-size: medium;
+    width: 33.33%;
+
+}
+button.leave-request-button{
+    color: white;
+    background-color: red;
+    width: 30%;
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    font-size: smaller;
+    margin-top: 5px;
+    margin-left: 38%;
+}
+table.calendar-table{
+    width: 100%;
+    text-align: center;
+    padding: 3px;
+    margin-top: 5px;
+    
+}
+.excluded{
+    color: rgba(128, 128, 128, 0.432);
+}
+h3.date-timeset{
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+}
+img.calendar-icon{
+    width: 15px;
+    margin-left: 20px;
+    margin-top: 10px;
+    
+}
+img.a-left{
+    width: 15px;
+    margin-left: 195px;
+    margin-right: -100px;
+   
+}
+img.a-right{
+    width: 15px;
+    margin-left: 120px;
+    margin-right: 20px;
+    margin-top: 10px;
+    float: right;
+}
+.dot1 {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(111, 243, 111);
+    border-radius: 50%;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  .dot2 {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(227, 113, 113);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  .dot3 {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(230, 232, 124);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  table.legend{
+    margin-top: 240px;
+    margin-left: 200px;
+    font-size: 10px;
+  }
